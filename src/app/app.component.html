@@ -1,18 +1,5 @@
 <div>
-  <p>Nombre del empleado: {{nombre}}</p>
-  <p>Edad: {{edad+5}}</p>
-  <p>Los ultimos 3 sueldos son: {{sueldos[0]}}, {{sueldos[1]}}, {{sueldos[2]}} </p>
-  <p>En los ultimos 3 meses ha ganado: {{ultimos3Sueldos()}}</p>
-  <p *ngIf="edad >18 else menor"> Es mayor de edad</p>
-  <ng-template #menor>
-    <p>Es menor de edad</p>
-  </ng-template>
-  <table>
-    <tr>
-      <td>sueldos</td>
-    </tr>
-    <tr *ngFor="let sueldo of sueldos">
-      <td>{{sueldo}}</td>
-    </tr>
-  </table>
+  <p>Ingrese un nombre <input type="text" [(ngModel)]="nombre"></p>
+  <p>Ingrese un apellido <input type="text" [(ngModel)]="apellido"></p>
+  <p>Nombre completo: {{nombre}} {{apellido}}</p>
 </div>
